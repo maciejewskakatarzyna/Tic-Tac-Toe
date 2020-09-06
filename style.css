@@ -1,3 +1,64 @@
-body {
-  background-color: antiquewhite;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: url(/blackboard.jpg);
+  display: grid;
+  place-items: center;
+}
+
+.board {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(3, 150px);
+}
+
+.board__item:nth-child(1),
+.board__item:nth-child(2),
+.board__item:nth-child(4),
+.board__item:nth-child(5) {
+  border-right: solid 5px #ccc;
+  border-bottom: solid 5px #ccc;
+}
+
+.board__item:nth-child(2) {
+  border-left: solid 5px #ccc;
+}
+
+.board__item:nth-child(3),
+.board__item:nth-child(6) {
+  border-left: solid 5px #ccc;
+  border-bottom: solid 5px #ccc;
+}
+
+.board__item:nth-child(4),
+.board__item:nth-child(6),
+.board__item:nth-child(7) {
+  border-top: solid 5px #ccc;
+}
+
+.board__item:nth-child(5),
+.board__item:nth-child(8),
+.board__item:nth-child(9) {
+  border-left: solid 5px #ccc;
+  border-top: solid 5px #ccc;
+}
+
+.board__item:nth-child(7),
+.board__item:nth-child(8) {
+  border-right: solid 5px #ccc;
+}
+
+.board__item {
+  display: grid;
+  place-items: center;
+  font-family: "Eraser";
+  font-size: 120px;
+  color: white;
 }

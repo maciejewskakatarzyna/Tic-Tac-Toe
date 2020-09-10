@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: 'Eraser', arial;
+}
+
 .wrapper {
   width: 100vw;
   height: 100vh;
@@ -58,7 +62,33 @@
 .board__item {
   display: grid;
   place-items: center;
-  font-family: "Eraser";
   font-size: 120px;
   color: white;
+}
+
+.resultBoard {
+  color: white;
+  font-size: 2em;
+}
+
+.reset {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: none;
+  font-size: 1.5em;
+  border-radius: 5px;
+}
+
+.reset:hover {
+  font-weight: bold;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.offscreen {
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  position: absolute;
 }

@@ -1,10 +1,12 @@
 const fields = document.querySelectorAll('.board__item');
-const resultBoard = document.querySelector('.resultBoard');
+const infoBoard = document.querySelector('.infoBoard');
 const resetBtn = document.querySelector('.reset');
 const board = document.querySelector('.board');
 const title = document.querySelector('.title');
 
 let activePlayer = 'X';
+infoBoard.innerHTML = `Now play: ${activePlayer}`;
+
 let gameActive = true;
 
 let fieldsArray = ['', '', '', '', '', '', '', '', ''];
@@ -21,12 +23,22 @@ const winningConditions = [
 ];
 
 const displayGameResult = () => {
-  resultBoard.classList.remove('offscreen');
-  resultBoard.innerText = `Congratulations ${activePlayer}! You won!`;
+  infoBoard.innerHTML = `Congratulations ${
+    activePlayer === 'X' ? (activePlayer = 'O') : (activePlayer = 'X')
+  }! You won!`;
+};
+
+const displayActivePlayer = () => {
+  activePlayer = activePlayer === 'X' ? 'O' : 'X';
+  infoBoard.innerHTML = `Now play: ${activePlayer}`;
 };
 
 const displayResetBtn = () => {
   resetBtn.classList.remove('offscreen');
+};
+
+const isBoardFull = () => {
+  return fieldsArray.find(field => field === '') === undefined;
 };
 
 validateGame = () => {
@@ -49,8 +61,8 @@ fields.forEach(field => {
     if (gameActive && fieldsArray[index] === '') {
       fieldsArray[index] = activePlayer;
       e.target.innerHTML = `${activePlayer}`;
+      displayActivePlayer();
       validateGame();
-      activePlayer = activePlayer === 'X' ? 'O' : 'X';
     }
   });
 });
@@ -61,8 +73,9 @@ resetBtn.addEventListener('click', () => {
   });
   fieldsArray = ['', '', '', '', '', '', '', '', ''];
   activePlayer = 'X';
+  infoBoard.innerHTML = `Now play: ${activePlayer}`;
   board.classList.remove('offscreen');
-  resultBoard.classList.add('offscreen');
+  infoBoard.classList.remove('offscreen');
   resetBtn.classList.add('offscreen');
   title.classList.add('offscreen');
   gameActive = true;

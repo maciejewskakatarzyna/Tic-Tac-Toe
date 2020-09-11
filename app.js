@@ -1,6 +1,8 @@
 const fields = document.querySelectorAll('.board__item');
 const resultBoard = document.querySelector('.resultBoard');
 const resetBtn = document.querySelector('.reset');
+const board = document.querySelector('.board');
+const title = document.querySelector('.title');
 
 let activePlayer = 'X';
 let gameActive = true;
@@ -59,7 +61,9 @@ resetBtn.addEventListener('click', () => {
   });
   fieldsArray = ['', '', '', '', '', '', '', '', ''];
   activePlayer = 'X';
+  board.classList.remove('offscreen');
   resultBoard.classList.add('offscreen');
   resetBtn.classList.add('offscreen');
+  title.classList.add('offscreen');
   gameActive = true;
 });

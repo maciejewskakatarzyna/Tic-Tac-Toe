@@ -22,10 +22,14 @@ const winningConditions = [
   [6, 4, 2],
 ];
 
-const displayGameResult = () => {
+const displayWinningMessage = () => {
   infoBoard.innerHTML = `Congratulations ${
     activePlayer === 'X' ? (activePlayer = 'O') : (activePlayer = 'X')
   }! You won!`;
+};
+
+const displayTieMessage = () => {
+  infoBoard.innerHTML = `Tie!`;
 };
 
 const displayActivePlayer = () => {
@@ -42,16 +46,25 @@ const isBoardFull = () => {
 };
 
 validateGame = () => {
+  let gameWon = false;
   for (let i = 0; i <= 7; i++) {
     const [posA, posB, posC] = winningConditions[i];
     const value1 = fieldsArray[posA];
     const value2 = fieldsArray[posB];
     const value3 = fieldsArray[posC];
     if (value1 !== '' && value1 === value2 && value1 === value3) {
-      gameActive = false;
-      displayGameResult();
-      displayResetBtn();
+      gameWon = true;
+      break;
     }
+  }
+  if (gameWon) {
+    gameActive = false;
+    displayWinningMessage();
+    displayResetBtn();
+  } else if (isBoardFull()) {
+    gameActive = false;
+    displayTieMessage();
+    displayResetBtn();
   }
 };
 

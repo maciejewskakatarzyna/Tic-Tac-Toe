@@ -16,7 +16,7 @@ body {
 .wrapper {
   width: 100vw;
   height: 100vh;
-  background: url(/blackboard.jpg);
+  background: url(img/blackboard.jpg);
   display: grid;
   place-items: center;
 }

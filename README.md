@@ -1,14 +1,4 @@
 # Tic-Tac-Toe
-> Tic-Tac-Toe Game
-
-## Table of contents
-* [General info](#general-info)
-* [Screenshots](#screenshots)
-* [Technologies](#technologies)
-* [Demo](#demo)
-* [To-do list](#to-do-list)
-* [Status](#status)
-* [Contact](#contact)
 
 ## General info
 Tic-Tac-Toe Game created during learning Vanilla JS, to better understand basic JS concepts and communication with DOM.

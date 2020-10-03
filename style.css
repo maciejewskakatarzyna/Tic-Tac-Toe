@@ -8,6 +8,11 @@ body {
   font-family: 'Eraser', arial;
 }
 
+@font-face {
+  font-family: 'Eraser';
+  src: url('eraser-font/EraserRegular.ttf');
+}
+
 .wrapper {
   width: 100vw;
   height: 100vh;

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Eraser', arial;
 }
@@ -22,52 +26,52 @@ body {
 }
 
 .board {
-  padding: 10px;
+  padding: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, 150px);
-  grid-template-rows: repeat(3, 150px);
+  grid-template-columns: repeat(3, 15rem);
+  grid-template-rows: repeat(3, 15rem);
 }
 
 .board__item:nth-child(1),
 .board__item:nth-child(2),
 .board__item:nth-child(4),
 .board__item:nth-child(5) {
-  border-right: solid 5px #ccc;
-  border-bottom: solid 5px #ccc;
+  border-right: solid 0.5rem #ccc;
+  border-bottom: solid 0.5rem #ccc;
 }
 
 .board__item:nth-child(2) {
-  border-left: solid 5px #ccc;
+  border-left: solid 0.5rem #ccc;
 }
 
 .board__item:nth-child(3),
 .board__item:nth-child(6) {
-  border-left: solid 5px #ccc;
-  border-bottom: solid 5px #ccc;
+  border-left: solid 0.5rem #ccc;
+  border-bottom: solid 0.5rem #ccc;
 }
 
 .board__item:nth-child(4),
 .board__item:nth-child(6),
 .board__item:nth-child(7) {
-  border-top: solid 5px #ccc;
+  border-top: solid 0.5rem #ccc;
 }
 
 .board__item:nth-child(5),
 .board__item:nth-child(8),
 .board__item:nth-child(9) {
-  border-left: solid 5px #ccc;
-  border-top: solid 5px #ccc;
+  border-left: solid 0.5rem #ccc;
+  border-top: solid 0.5rem #ccc;
 }
 
 .board__item:nth-child(7),
 .board__item:nth-child(8) {
-  border-right: solid 5px #ccc;
+  border-right: solid 0.5rem #ccc;
 }
 
 .board__item {
   display: grid;
   place-items: center;
-  font-size: 120px;
+  font-size: 12rem;
   color: white;
 }
 
@@ -78,15 +82,15 @@ body {
 
 .infoBoard {
   color: white;
-  font-size: 2em;
+  font-size: 5rem;
 }
 
 .reset {
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   background-color: #ccc;
   border: none;
-  font-size: 1.5em;
-  border-radius: 5px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
 }
 
 .reset:hover {
@@ -97,9 +101,9 @@ body {
 
 .offscreen {
   clip: rect(0 0 0 0);
-  height: 1px;
-  width: 1px;
-  margin: -1px;
+  height: 0.1rem;
+  width: 0.1rem;
+  margin: -0.1rem;
   position: absolute;
 }
 
@@ -111,6 +115,6 @@ body {
 
 .title {
   color: white;
-  font-size: 5em;
-  margin-bottom: 50px;
+  font-size: 10rem;
+  margin-bottom: 5rem;
 }

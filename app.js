@@ -1,8 +1,10 @@
 const fields = document.querySelectorAll('.board__item');
 const infoBoard = document.querySelector('.infoBoard');
-const resetBtn = document.querySelector('.reset');
+const resetBtn = document.querySelectorAll('.reset');
 const board = document.querySelector('.board');
 const title = document.querySelector('.title');
+const startView = document.querySelector('.startView');
+const gameView = document.querySelector('.gameView');
 
 let activePlayer = 'X';
 infoBoard.innerHTML = `Now play: ${activePlayer}`;
@@ -23,9 +25,7 @@ const winningConditions = [
 ];
 
 const displayWinningMessage = () => {
-  infoBoard.innerHTML = `Congratulations ${
-    activePlayer === 'X' ? (activePlayer = 'O') : (activePlayer = 'X')
-  }! You won!`;
+  infoBoard.innerHTML = `Congratulations ${activePlayer === 'X' ? (activePlayer = 'O') : (activePlayer = 'X')}! You won!`;
 };
 
 const displayTieMessage = () => {
@@ -38,7 +38,7 @@ const displayActivePlayer = () => {
 };
 
 const displayResetBtn = () => {
-  resetBtn.classList.remove('offscreen');
+  resetBtn.forEach(btn => btn.classList.remove('offscreen'));
 };
 
 const isBoardFull = () => {
@@ -80,16 +80,17 @@ fields.forEach(field => {
   });
 });
 
-resetBtn.addEventListener('click', () => {
-  fields.forEach(field => {
-    field.innerHTML = '';
-  });
-  fieldsArray = ['', '', '', '', '', '', '', '', ''];
-  activePlayer = 'X';
-  infoBoard.innerHTML = `Now play: ${activePlayer}`;
-  board.classList.remove('offscreen');
-  infoBoard.classList.remove('offscreen');
-  resetBtn.classList.add('offscreen');
-  title.classList.add('offscreen');
-  gameActive = true;
-});
+resetBtn.forEach(btn =>
+  btn.addEventListener('click', () => {
+    fields.forEach(field => {
+      field.innerHTML = '';
+    });
+    fieldsArray = ['', '', '', '', '', '', '', '', ''];
+    activePlayer = 'X';
+    infoBoard.innerHTML = `Now play: ${activePlayer}`;
+    gameView.classList.remove('offscreen');
+    startView.classList.add('offscreen');
+    resetBtn.forEach(btn => btn.classList.add('offscreen'));
+    gameActive = true;
+  })
+);

@@ -83,6 +83,7 @@ body {
 .infoBoard {
   color: white;
   font-size: 5rem;
+  margin-bottom: 5rem;
 }
 
 .reset {
@@ -91,6 +92,7 @@ body {
   border: none;
   font-size: 2rem;
   border-radius: 0.5rem;
+  margin-top: 5rem;
 }
 
 .reset:hover {
@@ -107,7 +109,7 @@ body {
   position: absolute;
 }
 
-.startWindow {
+.startView {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,4 +119,10 @@ body {
   color: white;
   font-size: 10rem;
   margin-bottom: 5rem;
+}
+
+.gameView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

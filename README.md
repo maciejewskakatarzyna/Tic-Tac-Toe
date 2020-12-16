@@ -6,7 +6,7 @@ Tic-Tac-Toe Game created during learning Vanilla JS, to better understand basic 
 
 ## Screenshots
 
-![Example screenshot](../src/img/screenshot.png)
+![Example screenshot](./src/img/screenshot.png)
 
 ## Technologies
 

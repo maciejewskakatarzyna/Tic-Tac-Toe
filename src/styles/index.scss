@@ -14,13 +14,13 @@ body {
 
 @font-face {
   font-family: 'Eraser';
-  src: url('eraser-font/EraserRegular.ttf');
+  src: url('../../src/eraser-font/EraserRegular.ttf');
 }
 
 .wrapper {
   width: 100vw;
   height: 100vh;
-  background: url(img/blackboard.jpg);
+  background: url('../../src/img/blackboard.jpg');
   display: grid;
   place-items: center;
 }

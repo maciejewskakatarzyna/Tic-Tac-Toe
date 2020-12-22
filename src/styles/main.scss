@@ -1,0 +1,43 @@
+@import '_variables';
+@import 'modules/board.scss';
+@import 'modules/game.scss';
+@font-face {
+  font-family: 'Eraser';
+  src: url('../../src/eraser-font/EraserRegular.ttf');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Eraser', arial;
+  color: #fff;
+}
+
+.button {
+  padding: 1rem 2rem;
+  background-color: #ccc;
+  border: none;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  margin-top: 5rem;
+  &:hover {
+    font-weight: bold;
+    background-color: #ddd;
+    cursor: pointer;
+  }
+}
+
+.offscreen {
+  clip: rect(0 0 0 0);
+  height: 0.1rem;
+  width: 0.1rem;
+  margin: -0.1rem;
+  position: absolute;
+}

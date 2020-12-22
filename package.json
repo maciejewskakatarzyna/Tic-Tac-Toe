@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple boilerplate for static website",
   "scripts": {
-    "build:scss": "node-sass --output-style compressed -o dist/styles src/styles",
+    "build:scss": "node-sass --output-style compressed -o dist/styles src/styles/main.scss",
     "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
     "build:js": "eslint --fix ./src/js/*.js && babel src -d dist",
     "watch:js": "onchange -i -v \"./src/js/*.js\" -- eslint --fix ./src/js/*.js",

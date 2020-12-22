@@ -1,10 +1,10 @@
 const fields = document.querySelectorAll('.board__item');
-const infoBoard = document.querySelector('.infoBoard');
-const resetBtn = document.querySelectorAll('.reset');
+const infoBoard = document.querySelector('.game__infoBoard');
+const resetBtn = document.querySelectorAll('.button');
 const board = document.querySelector('.board');
-const title = document.querySelector('.title');
-const startView = document.querySelector('.startView');
-const gameView = document.querySelector('.gameView');
+const title = document.querySelector('.game__title');
+const startView = document.querySelector('.game__startView');
+const gameView = document.querySelector('.game__gameView');
 
 let activePlayer = 'X';
 infoBoard.innerHTML = `Now play: ${activePlayer}`;

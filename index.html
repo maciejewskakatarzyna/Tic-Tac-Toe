@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="dist/styles/index.css" />
+    <link rel="stylesheet" href="dist/styles/main.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="startView">
-        <p class="title">TIC TAC TOE</p>
-        <button class="reset">NEW GAME</button>
+    <div class="game">
+      <div class="game__startView">
+        <p class="game__title">TIC TAC TOE</p>
+        <button class="button">NEW GAME</button>
       </div>
-      <div class="gameView offscreen">
-        <div class="infoBoard"></div>
+      <div class="game__gameView offscreen">
+        <div class="game__infoBoard"></div>
         <div class="board">
           <div class="board__item" data-index="0"></div>
           <div class="board__item" data-index="1"></div>
@@ -26,7 +26,7 @@
           <div class="board__item" data-index="7"></div>
           <div class="board__item" data-index="8"></div>
         </div>
-        <button class="reset offscreen">NEW GAME</button>
+        <button class="button offscreen">NEW GAME</button>
       </div>
     </div>
 

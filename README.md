@@ -21,7 +21,7 @@ Demo version: https://maciejewskakatarzyna.github.io/Tic-Tac-Toe/
 ## To-do list:
 
 - Code more responsive layout
-- Add Sass
+- FIX DEMO VERSION!
 
 ## Status
 

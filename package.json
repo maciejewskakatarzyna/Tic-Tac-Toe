@@ -7,8 +7,9 @@
     "build:scss": "node-sass --output-style compressed -o dist/styles src/styles/main.scss",
     "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
     "build:js": "babel src -d dist",
+    "copy:html": "find src -name '*.html' -type f -exec cp {} dist \\;",
     "start": "browser-sync -s -f \"dist/**/*, src/**/*\"",
-    "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run build:js\"",
+    "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run build:js\" \"npm run copy:html\"",
     "publish": "gh-pages -d dist"
   },
   "author": "",
@@ -18,6 +19,7 @@
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "browser-sync": "^2.26.13",
+    "cp": "^0.2.0",
     "gh-pages": "^3.1.0",
     "node-sass": "^4.14.1",
     "onchange": "^6.1.1",

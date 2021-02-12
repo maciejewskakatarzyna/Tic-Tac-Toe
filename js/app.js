@@ -50,7 +50,7 @@ var isBoardFull = function isBoardFull() {
   }) === undefined;
 };
 
-validateGame = function validateGame() {
+var validateGame = function validateGame() {
   var gameWon = false;
 
   for (var i = 0; i <= 7; i++) {

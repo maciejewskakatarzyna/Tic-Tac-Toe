@@ -11,7 +11,7 @@ Tic-Tac-Toe Game created during learning Vanilla JS, to better understand basic 
 ## Technologies
 
 - HTML
-- CSS
+- CSS (Grid, SCSS)
 - Vanilla JS
 
 ## Demo
@@ -20,8 +20,7 @@ Demo version: https://maciejewskakatarzyna.github.io/Tic-Tac-Toe/
 
 ## To-do list:
 
-- Code more responsive layout
-- FIX DEMO VERSION!
+- add media queries
 
 ## Status
 

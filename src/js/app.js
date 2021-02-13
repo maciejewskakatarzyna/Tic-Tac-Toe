@@ -25,7 +25,9 @@ const winningConditions = [
 ];
 
 const displayWinningMessage = () => {
-  infoBoard.innerHTML = `Congratulations ${activePlayer === 'X' ? (activePlayer = 'O') : (activePlayer = 'X')}! You won!`;
+  infoBoard.innerHTML = `Congratulations ${
+    activePlayer === 'X' ? (activePlayer = 'O') : (activePlayer = 'X')
+  }! You won!`;
 };
 
 const displayTieMessage = () => {
@@ -45,7 +47,7 @@ const isBoardFull = () => {
   return fieldsArray.find(field => field === '') === undefined;
 };
 
-validateGame = () => {
+const validateGame = () => {
   let gameWon = false;
   for (let i = 0; i <= 7; i++) {
     const [posA, posB, posC] = winningConditions[i];

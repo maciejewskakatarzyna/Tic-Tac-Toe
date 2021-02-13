@@ -8,6 +8,7 @@
     "watch:scss": "onchange -i -v \"./src/styles/*.scss\" -- npm run build:scss",
     "build:js": "babel src -d dist",
     "copy:html": "find src -name '*.html' -type f -exec cp {} dist \\;",
+    "copy:img": "find src -name '*.jpg' -type f -exec cp {} dist \\;",
     "start": "browser-sync -s -f \"dist/**/*, src/**/*\"",
     "watch:all": "parallelshell \"npm start\" \"npm run watch:scss\" \"npm run build:js\" \"npm run copy:html\"",
     "publish": "gh-pages -d dist"

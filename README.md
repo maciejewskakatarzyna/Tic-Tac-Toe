@@ -6,7 +6,7 @@ Tic-Tac-Toe Game created during learning Vanilla JS, to better understand basic 
 
 ## Screenshots
 
-![Example screenshot](./src/img/screenshot.png)
+![Example screenshot](src/assets/screenshot.png)
 
 ## Technologies
 
@@ -21,7 +21,6 @@ Demo version: https://maciejewskakatarzyna.github.io/Tic-Tac-Toe/
 ## To-do list:
 
 - Code more responsive layout
-- FIX DEMO VERSION!
 
 ## Status
 
